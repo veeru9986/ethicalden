@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Hero from './Hero/Hero';
-import About from './About/About';
-import Projects from './Projects/Projects';
-import Contact from './Contact/Contact';
-import Footer from './Footer/Footer';
-
+// import Hero from './Hero/Hero';
+// import About from './About/About';
+// import Projects from './Projects/Projects';
+// import Contact from './Contact/Contact';
+// import Footer from './Footer/Footer';
+import logo from '../images/Layer 2.png';
 import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import Navbar from './Navbar/Navbar';
+import HeroBackground from './HeroBackground/HeroBackground';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -26,11 +28,8 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Navbar Logo={logo} />
+      <HeroBackground />
     </PortfolioProvider>
   );
 }

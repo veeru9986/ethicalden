@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -22,10 +23,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `ETHICAL DEN`,
+        short_name: `ETHICAL DEN`,
         start_url: `/`,
-        background_color: `#fff`,
+        background_color: `#000000`,
         theme_color: `#02aab0`,
         display: `standalone`,
         icon: 'src/images/favicon.png',
