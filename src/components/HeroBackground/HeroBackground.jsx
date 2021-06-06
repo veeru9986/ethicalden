@@ -15,9 +15,9 @@ function HeroBackground() {
         </video> */}
         <div className="banner_heading">
           <h2>innovative</h2>
-          <h1 style={{ fontSize: '60px' }}>Cyber AGENCY</h1>
+          <h1 style={{ fontSize: '92px' }}>Cyber AGENCY</h1>
           <div className="blue_line" />
-          <div style={{ display: 'flex', height: '50px' }}>
+          <div style={{ display: 'flex', height: '50px', marginTop: "10px" }}>
             <ReactTypingEffect
               text={[
                 'Mobile App Development',
@@ -28,6 +28,10 @@ function HeroBackground() {
                 'Cyber Security',
               ]}
               cursorRenderer={(cursor) => <h1>{cursor}</h1>}
+            //   speed="700ms"
+              eraseSpeed="700ms"
+              eraseDelay="2000ms"
+              typingDelay="1500ms"
               // eslint-disable-next-line no-unused-vars
               displayTextRenderer={(text) => {
                 return (
@@ -35,7 +39,7 @@ function HeroBackground() {
                     {text.split('').map((char, i) => {
                       const key = `${i}`;
                       return (
-                        <span key={key} style={i % 2 === 0 ? { color: '#0a58ff' } : {}}>
+                        <span key={key} style={i % 2 === 0 ? { color: '#fff' } : {}}>
                           {char}
                         </span>
                       );
@@ -85,7 +89,7 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
   h2 {
-    font-size: 40px;
+    font-size: 52px;
     color: #fff;
     text-transform: uppercase;
     font-family: 'Teko', sans-serif;
@@ -99,7 +103,7 @@ const Wrapper = styled.div`
     letter-spacing: 0.09em;
   }
   h3 {
-    color: #7ed957;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.09em;
     font-family: 'Teko', sans-serif;
@@ -107,7 +111,7 @@ const Wrapper = styled.div`
   }
   .blue_line {
     width: 115px;
-    height: 16px;
+    height: 10px;
     background-color: #0a58ff;
   }
 `;

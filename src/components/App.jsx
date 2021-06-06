@@ -10,6 +10,7 @@ import { PortfolioProvider } from '../context/context';
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 import Navbar from './Navbar/Navbar';
 import HeroBackground from './HeroBackground/HeroBackground';
+import HeroTopics from './HeroTopics/HeroTopics';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -30,6 +31,7 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Navbar Logo={logo} />
       <HeroBackground />
+      <HeroTopics />
     </PortfolioProvider>
   );
 }
