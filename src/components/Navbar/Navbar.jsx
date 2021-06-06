@@ -45,7 +45,7 @@ const Navbar = ({ Logo }) => {
 };
 
 export const NavStyles = styled.nav`
-  position: fixed;
+  position: absolute;
   z-index: 999;
   top: 0;
   display: flex;
@@ -92,9 +92,9 @@ export const NavStyles = styled.nav`
     grid-area: 1/5/2/11;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-self: center;
-    position: fixed;
+    /* position: fixed; */
     text-align: center;
     background: transparent;
     margin: 0;

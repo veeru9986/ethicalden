@@ -11,16 +11,21 @@ import { heroData, aboutData, projectsData, contactData, footerData } from '../m
 import Navbar from './Navbar/Navbar';
 import HeroBackground from './HeroBackground/HeroBackground';
 import HeroTopics from './HeroTopics/HeroTopics';
+import OurServices from './OurServices/OurServices';
+import RecentWorks from './RecentWorks/RecentWorks';
+import ReviewsByOurClient from './ReviewsByOurClient/Reviews';
+import Teams from './Teams/Teams';
+import Clients from './Clients/Client';
 
 function App() {
-  const [hero, setHero] = useState({});
+  const [hero, setHero] = useState([]);
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
 
   useEffect(() => {
-    setHero({ ...heroData });
+    setHero([...heroData]);
     setAbout({ ...aboutData });
     setProjects([...projectsData]);
     setContact({ ...contactData });
@@ -31,7 +36,12 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Navbar Logo={logo} />
       <HeroBackground />
-      <HeroTopics />
+      <HeroTopics data={hero} />
+      <OurServices />
+      <RecentWorks />
+      <ReviewsByOurClient />
+      <Teams />
+      <Clients />
     </PortfolioProvider>
   );
 }

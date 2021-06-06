@@ -8,12 +8,26 @@ export const headData = {
 };
 
 // HERO DATA
-export const heroData = {
-  title: '',
-  name: '',
-  subtitle: '',
-  cta: '',
-};
+export const heroData = [
+  {
+    id: 0,
+    title: 'SECURity EXperts',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse quam ac cursus tortor consequat. Amet dapibus et et est, quam.',
+  },
+  {
+    id: 0,
+    title: 'EDuCATION EXPERTS',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse quam ac cursus tortor consequat. Amet dapibus et et est, quam.',
+  },
+  {
+    id: 0,
+    title: 'Digital marketing',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse quam ac cursus tortor consequat. Amet dapibus et et est, quam.',
+  },
+];
 
 // ABOUT DATA
 export const aboutData = {
