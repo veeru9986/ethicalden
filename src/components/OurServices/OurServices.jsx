@@ -31,14 +31,22 @@ function OurServices(props) {
         {data.map((d) => {
           return (
             <>
-              <div className="our_services_section_flex">
-                <span className="our_services_number" style={{ color: 'white' }}>
-                  {d.num}
-                </span>
-                <h3>{d.title}</h3>
-                <div className="blue_line" />
-                <p>{d.info}</p>
-              </div>
+              <Fade
+                top={!d.top ? false : d.top}
+                left={!d.left ? false : d.left}
+                right={!d.right ? false : d.right}
+                bottom={!d.bottom ? false : d.bottom}
+                delay={d.delay}
+              >
+                <div className="our_services_section_flex">
+                  <span className="our_services_number" style={{ color: 'white' }}>
+                    {d.num}
+                  </span>
+                  <h3>{d.title}</h3>
+                  <div className="blue_line" />
+                  <p>{d.info}</p>
+                </div>
+              </Fade>
             </>
           );
         })}
