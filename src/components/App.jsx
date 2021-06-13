@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 // import Hero from './Hero/Hero';
 // import About from './About/About';
@@ -7,14 +8,21 @@ import React, { useState, useEffect } from 'react';
 import logo from '../images/Layer 2.png';
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import {
+  heroData,
+  aboutData,
+  projectsData,
+  contactData,
+  footerData,
+  servicesData,
+} from '../mock/data';
 import Navbar from './Navbar/Navbar';
 import HeroBackground from './HeroBackground/HeroBackground';
 import HeroTopics from './HeroTopics/HeroTopics';
 import OurServices from './OurServices/OurServices';
 import RecentWorks from './RecentWorks/RecentWorks';
 import ReviewsByOurClient from './ReviewsByOurClient/Reviews';
-import Teams from './Teams/Teams';
+import SoftwareCompany from './SoftwareCompany/index';
 import Clients from './Clients/Client';
 
 function App() {
@@ -23,6 +31,8 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
+  // eslint-disable-next-line no-shadow
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     setHero([...heroData]);
@@ -30,17 +40,19 @@ function App() {
     setProjects([...projectsData]);
     setContact({ ...contactData });
     setFooter({ ...footerData });
+    setServices([...servicesData]);
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+    <PortfolioProvider value={{ hero, about, projects, contact, footer, services }}>
       <Navbar Logo={logo} />
       <HeroBackground />
       <HeroTopics data={hero} />
-      <OurServices />
+      <SoftwareCompany />
+
+      <OurServices data={services} />
       <RecentWorks />
       <ReviewsByOurClient />
-      <Teams />
       <Clients />
     </PortfolioProvider>
   );

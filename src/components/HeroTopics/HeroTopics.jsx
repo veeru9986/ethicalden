@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 function HeroTopics(props) {
   const { data } = props;
-  console.log(data);
   return (
     <Wrapper>
       <div className="hero_topic_section">
@@ -12,6 +11,9 @@ function HeroTopics(props) {
           {data.map((d) => {
             return (
               <div className="hero_topics">
+                <div className="hero_topics_icon">
+                  <img src={d.icon} alt={d.title} />
+                </div>
                 <div className="hero_topics_heading">
                   <h4>{d.title}</h4>
                 </div>
@@ -43,6 +45,13 @@ const Wrapper = styled.div`
     grid-area: 1 / 2/2 / 11;
     display: flex;
   }
+  .hero_topics_icon {
+    display: flex;
+  }
+  img {
+    width: 90px;
+    height: 90px;
+  }
   .hero_topic_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -60,7 +69,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #1a1a1a;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;

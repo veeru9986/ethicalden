@@ -70,7 +70,7 @@ const Wrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   @media (max-width: 479px) {
-    background-size: cover;
+    background-size: contain;
   }
   .banner_section {
     grid-area: 1/1/2/12;

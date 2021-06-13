@@ -44,6 +44,8 @@ const Navbar = ({ Logo }) => {
   );
 };
 
+export default Navbar;
+
 export const NavStyles = styled.nav`
   position: absolute;
   z-index: 999;
@@ -60,7 +62,6 @@ export const NavStyles = styled.nav`
   /* grid-template-rows: 70px; */
   grid-column-gap: 5px;
   box-sizing: border-box;
-  background-color: transparent;
   @media (max-width: 991px) {
     /* padding-left: 2px; */
   }
@@ -70,6 +71,8 @@ export const NavStyles = styled.nav`
     width: 100%;
     height: 80px;
     display: flex;
+    align-items: flex-start;
+
     @media (max-width: 991px) {
       align-items: center;
     }
@@ -92,11 +95,11 @@ export const NavStyles = styled.nav`
     grid-area: 1/5/2/11;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-self: center;
-    /* position: fixed; */
+    position: fixed;
     text-align: center;
-    background: transparent;
+    background: #000;
     margin: 0;
     height: 70%;
     top: 0;
@@ -108,7 +111,6 @@ export const NavStyles = styled.nav`
     list-style: none;
     padding-left: 0;
     place-items: center;
-    width: 100%;
     li {
       list-style: none;
       font-size: 18px;
@@ -121,7 +123,7 @@ export const NavStyles = styled.nav`
       }
       a {
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: lowercase;
         color: #fff;
         transition: 0.3s;
 
@@ -132,7 +134,7 @@ export const NavStyles = styled.nav`
       &:hover {
         cursor: pointer;
         a {
-          color: #2cde80;
+          color: #7ed957;
         }
       }
     }
@@ -146,7 +148,7 @@ export const NavStyles = styled.nav`
     width: 40px;
     height: 40px;
     padding: 5px;
-    background-color: #fff;
+    background-color: #000000;
     border: none;
     cursor: pointer;
     @media (max-width: 479px) {
@@ -185,7 +187,6 @@ export const NavStyles = styled.nav`
     .masthead {
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
     }
     .toggle-btn {
       display: none;
@@ -213,5 +214,3 @@ export const NavStyles = styled.nav`
     color: var(--secondaryColor) !important;
   } */
 `;
-
-export default Navbar;
