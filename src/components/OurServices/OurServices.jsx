@@ -22,7 +22,7 @@ function OurServices(props) {
     <Wrapper>
       <div className="our_services_heading">
         <h2 className="our_services_h2">
-          <Fade top big cascade duration={1500} delay={500}>
+          <Fade top big cascade duration={1500} delay={300}>
             <span style={{ color: '#fff' }}>OUR</span> SERVICES
           </Fade>
         </h2>
@@ -37,6 +37,7 @@ function OurServices(props) {
                 right={!d.right ? false : d.right}
                 bottom={!d.bottom ? false : d.bottom}
                 delay={d.delay}
+                duration={1600}
               >
                 <div className="our_services_section_flex">
                   <span className="our_services_number" style={{ color: 'white' }}>
