@@ -2,15 +2,29 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 function OurServices(props) {
   // eslint-disable-next-line react/prop-types
   const { data } = props;
+  // const [isDesktop, setIsDesktop] = React.useState(false);
+  // const [isMobile, setIsMobile] = React.useState(false);
+  // React.useEffect(() => {
+  //   if (window.innerWidth > 769) {
+  //     setIsDesktop(true);
+  //     setIsMobile(false);
+  //   } else {
+  //     setIsMobile(true);
+  //     setIsDesktop(false);
+  //   }
+  // }, []);
   return (
     <Wrapper>
       <div className="our_services_heading">
         <h2 className="our_services_h2">
-          <span style={{ color: '#fff' }}>OUR</span> SERVICES
+          <Fade top big cascade duration={1500} delay={500}>
+            <span style={{ color: '#fff' }}>OUR</span> SERVICES
+          </Fade>
         </h2>
       </div>
       <div className="our_services_section">
@@ -58,6 +72,7 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
   }
   .our_services_h2 {
+    display: flex;
   }
   .our_services_section_flex {
     width: 320px;
