@@ -39,11 +39,15 @@ const Wrapper = styled.div`
   grid-template-rows: auto;
   width: 100%;
   height: auto;
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
 
   .hero_topic_section {
     grid-area: 1 / 2/2 / 11;
     display: flex;
+    @media (max-width: 479px) {
+      grid-area: 1 / 1/2 / 12;
+      padding: 0 10px;
+    }
   }
   .hero_topics_icon {
     display: flex;

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 // import About from './About/About';
 // import Projects from './Projects/Projects';
 // import Contact from './Contact/Contact';
-// import Footer from './Footer/Footer';
+import Footer from './Footer/Footer';
 import logo from '../images/Layer 2.png';
 import { PortfolioProvider } from '../context/context';
 
@@ -51,9 +51,10 @@ function App() {
       <SoftwareCompany />
 
       <OurServices data={services} />
-      <RecentWorks />
+      {/* <RecentWorks /> */}
       <ReviewsByOurClient />
       <Clients />
+      <Footer />
     </PortfolioProvider>
   );
 }

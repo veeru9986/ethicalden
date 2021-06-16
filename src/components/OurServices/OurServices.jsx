@@ -7,17 +7,17 @@ import Fade from 'react-reveal/Fade';
 function OurServices(props) {
   // eslint-disable-next-line react/prop-types
   const { data } = props;
-  // const [isDesktop, setIsDesktop] = React.useState(false);
-  // const [isMobile, setIsMobile] = React.useState(false);
-  // React.useEffect(() => {
-  //   if (window.innerWidth > 769) {
-  //     setIsDesktop(true);
-  //     setIsMobile(false);
-  //   } else {
-  //     setIsMobile(true);
-  //     setIsDesktop(false);
-  //   }
-  // }, []);
+  const [isDesktop, setIsDesktop] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true);
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+      setIsDesktop(false);
+    }
+  }, []);
   return (
     <Wrapper>
       <div className="our_services_heading">
@@ -31,14 +31,7 @@ function OurServices(props) {
         {data.map((d) => {
           return (
             <>
-              <Fade
-                top={!d.top ? false : d.top}
-                left={!d.left ? false : d.left}
-                right={!d.right ? false : d.right}
-                bottom={!d.bottom ? false : d.bottom}
-                delay={d.delay}
-                duration={1600}
-              >
+              <Fade left={isMobile} right={isMobile} top={isDesktop} bottom={isDesktop}>
                 <div className="our_services_section_flex">
                   <span className="our_services_number" style={{ color: 'white' }}>
                     {d.num}
@@ -65,7 +58,8 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: auto;
   background-color: #1a1a1a;
-  padding: 100px 0;
+  padding-bottom: 100px;
+  padding-top: 100px;
   .our_services_heading {
     grid-area: 1/2/2/11;
     text-align: center;
@@ -87,6 +81,7 @@ const Wrapper = styled.div`
     width: 320px;
     padding: 0 15px;
     transition: all 0.2s ease 0s;
+    height: 300px;
   }
   .our_services_section_flex:hover {
     background-color: #1a1a1a;
@@ -116,7 +111,7 @@ const Wrapper = styled.div`
     text-align: left;
     font-size: 32px;
     font-family: 'Teko', sans-serif;
-    margin-top: -30px;
+    margin-top: -40px;
   }
   p {
     color: #fff;
